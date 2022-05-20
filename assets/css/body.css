@@ -1,0 +1,324 @@
+body {
+  background-color: #fff7ea;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  font-size: 14px;
+  font-family: Arial, Helvetica, sans-serif, 微軟正黑體;
+  color: gray;
+}
+
+main {
+  height: 100vh;
+}
+
+.title,
+.copyright {
+  max-width: 350px;
+  display: flex;
+  justify-content: center;
+}
+
+.title {
+  flex-wrap: wrap;
+  margin: 20px 0 20px 0;
+}
+
+.title svg {
+  fill: rgb(164, 75, 16);
+}
+
+.title p {
+  margin: 10px 0 10px 0;
+  color: rgb(164, 75, 16);
+}
+
+.login__card {
+  max-width: 350px;
+  box-shadow: 0 12px 15px 0 rgba(0, 0, 0, 0.24),
+    0 17px 50px 0 rgba(0, 0, 0, 0.19);
+  border-radius: 10px;
+  padding: 5%;
+  background-color: #fff;
+  overflow: hidden;
+}
+
+.login__qrcode {
+  position: relative;
+  display: flex;
+  justify-content: flex-end;
+  right: -10px;
+  top: -10px;
+}
+
+.login__qrcode__content {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 1.5px solid #888888;
+  padding: 2px;
+  height: 16px;
+  border-radius: 4px;
+  position: relative;
+}
+
+.login__qrcode__content::before {
+  content: '';
+  position: absolute;
+  right: 0;
+  top: 50%;
+  width: 0;
+  height: 0;
+  border: 5px solid transparent;
+  border-left-color: #888888;
+  border-right: 0;
+  margin-top: -5px;
+  margin-right: -6px;
+}
+
+.login__qrcode__content::after {
+  content: '';
+  position: absolute;
+  right: 0;
+  top: 50%;
+  width: 0;
+  height: 0;
+  border: 4px solid transparent;
+  border-left-color: #ffffff;
+  border-right: 0;
+  margin-top: -4px;
+  margin-right: -4px;
+}
+
+.login__qrcode img {
+  position: relative;
+  width: 50px;
+  height: 50px;
+  right: -5px;
+  top: -5px;
+}
+
+.login__way {
+  display: flex;
+  flex-wrap: wrap;
+  height: 0px;
+  position: relative;
+  top: -20px;
+  margin: 0;
+}
+
+.login__way span {
+  width: 70px;
+  position: relative;
+  top: -5px;
+  left: 5px;
+  transition: 1s;
+
+  display: flex;
+  justify-content: center;
+  width: 70px;
+}
+
+.login__way span::before {
+  content: '';
+  display: block;
+  height: 4px;
+  width: 0px;
+  border-radius: 4px;
+  background-color: rgb(164, 75, 16);
+  position: absolute;
+  bottom: -7px;
+  left: 0;
+  transition: width 300ms;
+}
+
+.login__way span:hover::before {
+  width: 100%;
+}
+.login__way .bar {
+  width: 100%;
+  display: block;
+  background-color: gray;
+  border: solid 0.2px gray;
+}
+
+/* 三個登入方式 */
+.login__phone,
+.login__slide,
+.login__login {
+  height: 28px;
+  background-color: rgb(220, 220, 220);
+  display: flex;
+  align-items: center;
+  font-weight: 600;
+  margin: 10px 0 10px 0;
+
+  border: 1px solid rgb(97, 97, 97);
+  border-radius: 3px;
+}
+
+.login__phone {
+  display: flex;
+  justify-content: center;
+  overflow: hidden;
+}
+
+.login__phone__country {
+  width: 25%;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  height: 28px;
+  border-radius: 3px 0 0 3px;
+  border-right: 1px solid rgb(97, 97, 97);
+  cursor: pointer;
+}
+
+.login__phone__content {
+  /* 清除格式 */
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  background: transparent;
+  border: none;
+  border-radius: 0;
+  font: inherit;
+  outline: none;
+  /* 加上想要的格式 */
+  width: 75%;
+  height: 28px;
+  background-color: #fff;
+  font-size: 12px;
+  color: black;
+}
+
+input::placeholder {
+  color: rgb(212, 212, 212);
+  font-size: 0.8rem;
+  font-style: italic;
+}
+
+.login__slide {
+  display: flex;
+  justify-content: center;
+  overflow-x: hidden;
+  overflow-y: visible;
+}
+
+.login__slide__box {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 15%;
+  background-color: #fff;
+  height: 28px;
+  border-radius: 3px 0 0 3px;
+  border-right: 1px solid rgb(97, 97, 97);
+
+  box-shadow: 2px 0px 10px 0px rgba(0, 0, 0, 0.19);
+  cursor: pointer;
+}
+
+.login__slide__box:hover {
+  box-shadow: 2px 0px 10px 0px rgba(0, 0, 0, 0.5);
+}
+
+.login__slide__content {
+  display: flex;
+  justify-content: center;
+  width: 85%;
+}
+
+.login__login {
+  display: flex;
+  justify-content: center;
+  cursor: pointer;
+}
+
+.login__next {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0;
+}
+
+#checkbox {
+  cursor: pointer;
+}
+
+.login__next__auto {
+  flex: 1;
+}
+
+.login__next__forget {
+  padding: 5px;
+  margin: 5px;
+  border-right: 1px solid gray;
+  cursor: pointer;
+}
+
+.login__next__signin {
+  cursor: pointer;
+}
+
+.login__another {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin-top: 40px;
+  margin-bottom: 10px;
+}
+
+.login__another > span {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+}
+
+.login__another > div {
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+  align-items: center;
+  margin: 5px 0 5px 0;
+  padding: 7px;
+  border-radius: 2px;
+}
+
+.login__logo__svg {
+  width: 25%;
+  display: flex;
+  justify-content: flex-end;
+}
+
+.login__logo__content {
+  width: 70%;
+  color: white;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+.login__logo__fb {
+  background-color: #3476cb;
+}
+
+.login__logo__line {
+  background-color: #52b24c;
+}
+
+.login__logo__ggl {
+  background-color: #fff;
+  outline: 2px solid #5d7fbe;
+  outline-offset: -2px;
+}
+
+.login__logo__ggl .login__logo__content {
+  color: gray;
+}
+
+.copyright {
+  margin: 50px 0 10px 0;
+  color: rgb(164, 75, 16);
+}
